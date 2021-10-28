@@ -34,7 +34,7 @@ for (i = 0; i < listaInvitati.length; i++){
 
 }
 
-if (found = true){
+if (found == true){
 
     inList.innerHTML = `Salve ${nome}, il suo nome si trova in lista. Può partecipare alla festa`;
 
