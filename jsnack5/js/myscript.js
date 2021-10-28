@@ -5,95 +5,33 @@
 
 const listaNumeri = document.getElementById("lista");
 
+/* creiamo una variabile richiesta */
+
+let richiesta = 0;
+
 /* creaimo un array vuoto */
 
 const listaDispari = [];
 
 console.log(listaDispari);
 
-/* chiediamo all'utente di inserire sei numeri */
+/* creiamo un ciclo for per chiedere all'utente di inserire 6 numeri mediante i prompt*/
 
-const numeroUno = prompt("Inserisci il primo numero");
+for (let i = 0; i < 6; i++){
 
-console.log(numeroUno);
+    richiesta = prompt("inserisci il numero");
 
-const numeroDue = prompt("Inserisci il secondo numero");
+    /* mettiamo la condizione per cui se il numero è dispari allora viene pushato, altrimenti no */
 
-console.log(numeroDue);
+    if (richiesta % 2 != 0){
 
-const numeroTre = prompt("Inserisci il terzo numero");
-
-console.log(numeroTre);
-
-const numeroQuattro = prompt("Inserisci il quarto numero");
-
-console.log(numeroQuattro);
-
-const numeroCinque = prompt("Inserisci il quinto numero");
-
-console.log(numeroCinque);
-
-const numeroSei = prompt("Inserisci il sesto numero");
-
-console.log(numeroSei);
-
-/* creiamo il ciclo per generare una lista di al massimo 6 numeri */
-
-while (listaDispari < 6){
-
-    let numOne = numeroUno;
-
-    let numeroTwo = numeroDue;
-
-    let numThree = numeroTre;
-
-    let numFour = numeroQuattro;
-
-    let numFive = numeroCinque;
-
-    let numSix = numeroSei;
-
-    /* andiamo a verificare le condizioni per cui se il numero è dispari viene inseito nella lista,altrimenti viene scartato */
-
-    if (numOne % 2 != 0){
-
-        listaDispari.push(numOne);
-
-    }
-
-    if (numeroTwo % 2 != 0){
-
-        listaDispari.push(numeroTwo);
-
-    }
-
-    if (numThree % 2 != 0){
-
-        listaDispari.push(numThree);
-
-    }
-
-    if (numFour % 2 != 0){
-
-        listaDispari.push(numFour);
-
-    }
-
-    if (numFive % 2 != 0){
-
-        listaDispari.push(numFive);
-
-    }
-
-    if (numSix % 2 != 0){
-
-        listaDispari.push(numSix);
+        listaDispari.push(richiesta);
 
     }
 
 }
 
-/* stampiamo sulla pagina la lista dei numeri dispari */
+/* stampiamo la lista sul browser */
 
-listaNumeri.innerHTML = `La lista dei numeri dispari è: ${listaDispari}`
+listaNumeri.innerHTML = `La lista dei numeri dispari è: ${listaDispari}`;
 
