@@ -14,7 +14,7 @@ console.log(numList);
 
 /* andiamo a generare i numeri */
 
-let i = 0;
+
 
 while (numList.length < 50){
 
@@ -26,8 +26,6 @@ while (numList.length < 50){
 
     }
         
-    i++
-
 }
 
 
