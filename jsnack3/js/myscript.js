@@ -6,50 +6,26 @@ Il programma stampa la somma di tutti i numeri inseriti. */
 
 const totale = document.getElementById("somma");
 
+/* creiamo due variabili, una per la somma e una per il prompt */
+
+let max = 0;
+
+let richiesta = 0;
+
 /* creiamo dieci prompt per chiedere all'utente 10 numeri */
 
-const numeroUno = prompt("Inserisci il primo numero");
+for (let i = 0; i < 10; i++){
 
-console.log(numeroUno);
+    /* forziamo il valore ad essere un numero invece di una stringa, quindi inseriamo un parseint nel prompt, altrimenti il numero inserito viene considerato una stringe e la somma dei numeri sarebbe la loro successione. es: 12345678910 anchichè la loro somma: 55 */
 
-const numeroDue = prompt("Inserisci il secondo numero");
+    richiesta = parseInt(prompt("inserisci un numero"));
 
-console.log(numeroDue);
+    /* sommiamo i numeri e otteniamo il totale */
 
-const numeroTre = prompt("Inserisci il terzo numero");
+    max = max + richiesta;
 
-console.log(numeroTre);
-
-const numeroQuattro = prompt("Inserisci il quarto numero");
-
-console.log(numeroQuattro);
-
-const numeroCinque = prompt("Inserisci il quinto numero");
-
-console.log(numeroCinque);
-
-const numeroSei = prompt("Inserisci il sesto numero");
-
-console.log(numeroSei);
-
-const numeroSette = prompt("Inserisci il settimo numero");
-
-console.log(numeroSette);
-
-const numeroOtto = prompt("Inserisci il ottavo numero");
-
-console.log(numeroOtto);
-
-const numeroNove = prompt("Inserisci il nono numero");
-
-console.log(numeroNove);
-
-const numeroDieci = prompt("Inserisci il decimo numero");
-
-console.log(numeroDieci);
+}
 
 /* stampiamo sulla pagina la somma dei numeri scelti */
 
-let sommaNumeri = `${numeroUno} + ${numeroDue} + ${numeroTre} + ${numeroQuattro} + ${numeroCinque} + ${numeroSei} + ${numeroSette} + ${numeroOtto} + ${numeroNove} + ${numeroDieci}`;
-
-totale.innerHTML = sommaNumeri;
+totale.innerHTML = `La somma dei numeri è: ${max}`;
